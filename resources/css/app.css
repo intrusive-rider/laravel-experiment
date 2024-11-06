@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-feature-settings: 'liga' 1, 'calt' 1, 'cv10' 1, 'cv08' 1;
+}
