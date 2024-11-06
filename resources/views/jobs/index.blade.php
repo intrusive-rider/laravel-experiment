@@ -1,4 +1,4 @@
-<x-layout>
+{{-- <x-layout>
     <div class="space-y-10">
         <section class="text-center pt-6">
             @guest
@@ -42,4 +42,4 @@
             </div>
         </section>
     </div>
-</x-layout>
+</x-layout> --}}
