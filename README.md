@@ -3,7 +3,7 @@
 My first project on GitHub 😫. <br>
     
 > [!NOTE]
-> Based on @JeffreyWay (amazing guy) beginner's tutorial on [laracasts 📺](https://laracasts.com/series/30-days-to-learn-laravel-11).
+> Based on @JeffreyWay (amazing guy) beginner's tutorial on [Laracasts 📺](https://laracasts.com/series/30-days-to-learn-laravel-11).
 
 💻 Beautifully constructed with:
 
