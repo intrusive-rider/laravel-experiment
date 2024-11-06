@@ -45,7 +45,7 @@
 </x-layout> --}}
 
 <x-layout>
-    <main class="max-w-[986px] mx-auto space-y-12">
+    <main class="max-w-[986px] mx-auto space-y-12 pb-12">
         <section class="flex flex-col items-center justify-center text-center py-6 space-y-3">
             @guest
                 <h1 class="text-4xl font-bold">Your dream job awaits you!</h1>
