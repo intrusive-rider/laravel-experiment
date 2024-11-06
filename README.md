@@ -12,5 +12,5 @@ My first project on GitHub 😫. <br>
 
 ---
 
-[^1]: I take my "I hate php" sentiment.
+[^1]: I take my "I hate PHP" sentiment.
 [^2]: Simply revolutionary.
