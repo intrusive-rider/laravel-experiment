@@ -5,11 +5,9 @@
 
 <body class="antialiased">
     <div class="px-6 space-y-12">
+        <x-nav />
         {{ $slot }}
-        {{-- <x-nav />
-
-        <main class="mt-10 max-w-[986px] mx-auto">
-        </main> --}}
+        <x-footer />
     </div>
 </body>
 

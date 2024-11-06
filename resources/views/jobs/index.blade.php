@@ -45,21 +45,6 @@
 </x-layout> --}}
 
 <x-layout>
-    <nav class="navbar border-b border-white/10 py-3">
-        <div class="navbar-start">
-            <a href="/" class="btn btn-ghost">
-                <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="" class="inline-block scale-110">
-            </a>
-        </div>
-        <div class="navbar-center">
-            <a href="/" class="btn btn-ghost">Surveys</a>
-            <a href="/" class="btn btn-ghost">Inclusivity</a>
-            <a href="/" class="btn btn-ghost">Partners</a>
-        </div>
-        <div class="navbar-end">
-            <a href="/login" class="btn btn-primary">Log in</a>
-        </div>
-    </nav>
     <main class="max-w-[986px] mx-auto space-y-12">
         <section class="flex flex-col items-center justify-center text-center py-6 space-y-3">
             @guest
@@ -100,36 +85,4 @@
             {{ $jobs->links() }}
         </section>
     </main>
-    <footer class="footer p-12 border-t border-white/10">
-        <aside class="space-y-6">
-            <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt=""
-                class="inline-block scale-110 grayscale opacity-75">
-            <p>
-                &copy; 2024 Pixel Positions, Inc.
-                <br />
-                All rights reserved.
-            </p>
-        </aside>
-        <nav>
-            <h6 class="footer-title">Company</h6>
-            <a class="link link-hover">About us</a>
-            <a class="link link-hover">Contact</a>
-            <a class="link link-hover">Jobs</a>
-            <a class="link link-hover">Press kit</a>
-        </nav>
-        <nav>
-            <h6 class="footer-title">Legal</h6>
-            <a class="link link-hover">Terms of use</a>
-            <a class="link link-hover">Privacy policy</a>
-            <a class="link link-hover">Cookie policy</a>
-        </nav>
-        <nav>
-            <h6 class="footer-title">Socials</h6>
-            <div class="grid grid-flow-col gap-4">
-                <i class="ph-fill ph-instagram-logo text-4xl"></i>
-                <i class="ph-fill ph-twitter-logo text-4xl"></i>
-                <i class="ph-fill ph-youtube-logo text-4xl"></i>
-            </div>
-        </nav>
-    </footer>
 </x-layout>
