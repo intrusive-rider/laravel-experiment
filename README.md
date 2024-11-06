@@ -10,7 +10,5 @@ my first project on github 😫. <br>
 - [laravel](https://github.com/laravel/laravel)[^1]
 - [tailwind](https://github.com/tailwindlabs/tailwindcss)[^2]
 
----
-
 [^1]: i take my "i hate php" sentiment.
 [^2]: simply revolutionary.
