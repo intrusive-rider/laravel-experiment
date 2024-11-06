@@ -10,7 +10,5 @@ My first project on GitHub 😫. <br>
 - [Laravel](https://github.com/laravel/laravel)[^1]
 - [Tailwind](https://github.com/tailwindlabs/tailwindcss) via [daisyUI](https://github.com/saadeghi/daisyui)[^2]
 
----
-
 [^1]: I take my "I hate PHP" sentiment.
 [^2]: Simply revolutionary.
