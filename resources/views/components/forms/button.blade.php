@@ -5,15 +5,7 @@
 
 @php
     $style = [
-        'bg-blue-600',
-        'hover:bg-blue-500',
-        'border-b-4 border-blue-900/75',
-        'rounded-md',
-        'flex items-center',
-        'px-4 py-2',
-        'font-bold',
-        'w-fit h-fit',
-        'transition-colors duration-300',
+        'btn btn-primary',
     ];
 @endphp
 

@@ -3,13 +3,13 @@
 
 <x-head />
 
-<body class="hero antialiased">
-    <div class="px-10">
-        <x-nav />
+<body class="antialiased">
+    <div class="px-6 space-y-12">
+        {{ $slot }}
+        {{-- <x-nav />
 
         <main class="mt-10 max-w-[986px] mx-auto">
-            {{ $slot }}
-        </main>
+        </main> --}}
     </div>
 </body>
 

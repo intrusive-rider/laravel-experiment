@@ -1,6 +1,6 @@
 @props(['label', 'name'])
 
-<div>
+{{-- <div>
     @if ($label)
         <x-forms.label :$name :$label />
     @endif
@@ -10,4 +10,6 @@
 
         <x-forms.error :error="$errors->first($name)" />
     </div>
-</div>
+</div> --}}
+
+
