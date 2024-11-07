@@ -1,55 +1,47 @@
 <x-layout>
-    <x-page-heading>Post a Job</x-page-heading>
+    <div class="flex flex-col items-center justify-center">
+        <h1 class="text-4xl font-bold">Post a Job</h1>
 
-    <x-forms.form :method="'POST'" action="/jobs" id="create-job">
-        <x-forms.input label="Job title" name="title" :placeholder="fake()->jobTitle()" />
-        <x-forms.input label="Salary ($)" name="salary" type="number" placeholder="12000" />
-
-        <div class="space-y-2">
-            <x-forms.label label="Description" name="desc" />
-
-            <div>
-                <div id="toolbar"
-                    class="rounded-t-xl bg-white/10 border border-b-0 border-white/10 px-3 py-2 w-full font-sans">
-                    <button type="button"
-                        class="ql-bold px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300 font-bold">B</button>
-                    <button type="button"
-                        class="ql-italic px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300 italic">I</button>
-                    <button type="button"
-                        class="ql-underline px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300 underline">U</button>
-                    <button type="button"
-                        class="ql-strike px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300 line-through">S</button>
-                    <button class="ql-list px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300"
-                        value="ordered" type="button">Num. list</button>
-                    <button class="ql-list px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300"
-                        value="bullet" type="button">Bullet list</button>
+        <x-forms.form :method="'POST'" action="/jobs" id="create-job">
+            <div class="space-y-6">
+                <div class="grid lg:grid-cols-2 gap-6">
+                    <x-forms.input name="title" placeholder="Job title" />
+                    <x-forms.input name="salary" type="number" placeholder="Salary (USD)" />
                 </div>
-                <div id="editor"
-                    class="rounded-b-xl bg-white/10 border border-white/10 px-3 py-2 w-full font-sans text-base h-48">
-                    {!! old('desc') !!}</div>
+
+                <x-forms.textarea>Write your job description here...</x-forms.textarea>
+
+                <div class="grid lg:grid-cols-2 gap-6 items-start">
+                    <x-forms.input name="region" placeholder="Region" />
+
+                    <x-forms.select name="schedule" placeholder="Schedule">
+                        <option>Full-time</option>
+                        <option>Part-time</option>
+                    </x-forms.select>
+
+                    <div>
+                        <div class="label">
+                            <span class="label-text">Available until...</span>
+                        </div>
+                        <x-forms.input name="expire" type="date" />
+                    </div>
+
+                    <div>
+                        <div class="label">
+                            <span class="label-text">Optional</span>
+                        </div>
+                        <x-forms.input name="tags" placeholder="Tags (comma separated)" />
+                    </div>
+                </div>
+
+                <x-forms.checkbox name="is_featured">Feature? (costs extra)</x-forms.checkbox>
+
             </div>
 
-            <x-forms.error error="{{ $errors->first('desc') }}" />
-
-            <input type="hidden" name="desc" id="desc" />
-        </div>
-
-        <x-forms.input label="Region" name="region" :placeholder="fake()->city() . ', ' . fake()->stateAbbr()" />
-
-        <x-forms.input label="Available until..." name="expire" type="date" />
-
-        <x-forms.select label="Schedule" name="schedule">
-            <option class="text-black">Full-time</option>
-            <option class="text-black">Part-time</option>
-        </x-forms.select>
-
-        <x-forms.checkbox label="Feature? (costs extra)" name="is_featured" />
-
-        <x-forms.divider />
-
-        <x-forms.input label="Tags (comma separated, optional)" name="tags"
-            placeholder="education,machinery,animal handling" />
-
-        <x-forms.button>Create</x-forms.button>
-    </x-forms.form>
+            <div class="flex gap-3">
+                <x-forms.button>Create</x-forms.button>
+                <a href="/" class="btn btn-ghost">Cancel</a>
+            </div>
+        </x-forms.form>
+    </div>
 </x-layout>

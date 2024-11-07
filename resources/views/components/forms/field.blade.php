@@ -1,4 +1,4 @@
-@props(['label', 'name'])
+\@props(['label', 'name'])
 
 <div>
     @if ($label)
@@ -8,6 +8,6 @@
     <div class="mt-2">
         {{ $slot }}
 
-        <x-forms.error :error="$errors->first($name)" />
+        
     </div>
 </div>

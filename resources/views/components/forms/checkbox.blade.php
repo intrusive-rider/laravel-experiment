@@ -5,14 +5,14 @@
         'type' => 'checkbox',
         'id' => $name,
         'name' => $name,
-        'value' => old($name)
+        'value' => old($name),
+        'class' => 'checkbox checkbox-primary checkbox-md',
     ];
 @endphp
 
-<x-forms.field :$label :$name>
-    <div class="rounded-xl bg-white/10 border border-white/10 px-5 py-4 w-full">
+<div class="form-control">
+    <label class="label cursor-pointer justify-start gap-3">
         <input {{ $attributes($defaults) }}>
-        <span class="pl-1">{{ $label }}</span>
-    </div>
-</x-forms.field>
-
+        <span class="label-text text-base">{{ $slot }}</span>
+    </label>
+</div>

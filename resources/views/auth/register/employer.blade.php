@@ -1,21 +1,42 @@
-<x-layout>
-   <x-page-heading>Register</x-page-heading>
+<x-layout class="flex h-screen max-w-none px-0">
+    <div class="w-2/5 px-12 flex flex-col items-start justify-center">
+        <h1 class="text-4xl font-bold">Register</h1>
 
-   <x-forms.form method="POST" action="/register/employer" enctype="multipart/form-data">
-      <x-forms.input label="Your name" name="name" />
-      <x-forms.input label="Email" name="email" type="email" />
-      <x-forms.input label="Password" name="password" type="password" />
-      <x-forms.input label="Confirm password" name="password_confirmation" type="password" />
+        <x-forms.form method="POST" action="/register/employer" enctype="multipart/form-data">
 
-      <x-forms.divider />
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold">Your profile</h2>
+                <x-forms.input placeholder="Your name" name="name" />
+                <x-forms.input placeholder="Email" name="email" type="email" />
+                <div class="grid lg:grid-cols-2 gap-6">
+                    <x-forms.input placeholder="Password" name="password" type="password" />
+                    <x-forms.input placeholder="Confirm password" name="password_confirmation" type="password" />
+                </div>
+            </section>
 
-      <x-forms.input label="Company" name="company" />
-      <x-forms.input label="Website" name="url" />
-      <x-forms.input label="Logo" name="logo" type="file" />
+            <section class="space-y-6">
+                <h2 class="text-2xl font-bold">Your company profile</h2>
+                <div class="grid lg:grid-cols-2 gap-6">
+                    <x-forms.input placeholder="Company name" name="company" />
+                    <x-forms.input placeholder="Website" name="url" />
+                </div>
+                <div>
+                    <div class="label">
+                        <span class="label-text">Company logo</span>
+                    </div>
+                    <x-forms.file-input name="logo" />
+                </div>
+            </section>
 
-      <div class="flex justify-between items-baseline">
-         <x-forms.button>Register</x-forms.button>
-         <x-link href="/login">Log in instead</x-link>
-      </div>
-   </x-forms.form>
+            <div class="flex items-baseline justify-between">
+                <div class="flex gap-3">
+                    <x-forms.button>Register</x-forms.button>
+                    <a href="/" class="btn btn-ghost">Cancel</a>
+                </div>
+                <x-link href="/login">Log in instead</x-link>
+            </div>
+        </x-forms.form>
+    </div>
+
+    <div class="grow bg-base-200" style="margin-top: 0px !important"></div>
 </x-layout>

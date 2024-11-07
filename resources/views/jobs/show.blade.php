@@ -8,18 +8,18 @@
             </div>
 
             <div class="flex-1 flex flex-col">
-                <a href="#" class="place-self-start text-sm text-gray-400">Company</a>
+                <p class="place-self-start text-sm text-gray-400">Company</p>
 
                 <h3 class="font-bold text-xl mt-1 group-hover:text-blue-500 transition-colors duration-300">
                     {{ $job->company->name }}
                 </h3>
 
-                <x-link href="{{ $job->company->url }}" class="text-sm">{{ $job->company->url }}</x-link>
+                <x-link href="{{ $job->company->url }}" class="text-sm mt-auto text-gray-400">{{ $job->company->url }}</x-link>
             </div>
         </x-panel>
         <x-panel class="flex gap-x-6 grow w-fit">
             <div class="flex-1 flex flex-col">
-                <a href="#" class="place-self-start text-sm text-gray-400">Salary</a>
+                <p class="place-self-start text-sm text-gray-400">Salary</p>
 
                 <h3 class="font-bold text-xl mt-1 group-hover:text-blue-500 transition-colors duration-300">
                     From ${{ number_format($job->salary) }}
@@ -30,7 +30,7 @@
         </x-panel>
         <x-panel class="flex gap-x-6 grow w-fit">
             <div class="flex-1 flex flex-col">
-                <a href="#" class="place-self-start text-sm text-gray-400">Location</a>
+                <p class="place-self-start text-sm text-gray-400">Location</p>
 
                 <h3 class="font-bold text-xl mt-1 group-hover:text-blue-500 transition-colors duration-300">
                     {{ $job->region->name }}
@@ -41,7 +41,7 @@
         </x-panel>
     </div>
 
-    <x-forms.divider></x-forms.divider>
+    <div class="divider"></div>
 
     <div class="flex justify-between">
         <div class="flex gap-x-8">
