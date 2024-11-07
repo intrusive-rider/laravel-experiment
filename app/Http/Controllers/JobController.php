@@ -49,7 +49,7 @@ class JobController extends Controller
 
         $attr = $request->validate([
             'title' => ['required'],
-            'desc' => ['required', 'max:255'],
+            'desc' => ['required'],
             'salary' => ['required'],
             'region' => ['required'],
             'schedule' => ['required', Rule::in(['Part-time', 'Full-time'])],
@@ -96,14 +96,14 @@ class JobController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Job $job)//: RedirectResponse
+    public function update(Request $request, Job $job): RedirectResponse
     {   
         $formatted_desc = $request['desc'];
         $request['desc'] = strip_tags($request['desc']);
         
         $attr = $request->validate([
             'title' => ['required'],
-            'desc' => ['required', 'max:255'],
+            'desc' => ['required'],
             'salary' => ['required'],
             'region' => ['required'],
             'schedule' => ['required', Rule::in(['Part-time', 'Full-time'])],

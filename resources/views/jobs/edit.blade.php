@@ -9,16 +9,16 @@
         <x-forms.form :method="'PUT'" action="/jobs/{{ $job->id }}" id="edit-job">
             <div class="space-y-6">
                 <div class="grid lg:grid-cols-2 gap-6">
-                    <x-forms.input name="title" placeholder="Job title" value="{{ $job->title }}" />
-                    <x-forms.input name="salary" type="number" placeholder="Salary" value="{{ $job->salary }}" />
+                    <x-forms.input name="title" placeholder="Job title" value="{{ $job->title }}" required />
+                    <x-forms.input name="salary" type="number" placeholder="Salary" value="{{ $job->salary }}" required />
                 </div>
 
                 <x-forms.textarea>{!! $job->desc !!}</x-forms.textarea>
 
                 <div class="grid lg:grid-cols-2 gap-6 items-center">
-                    <x-forms.input name="region" placeholder="Region" value="{{ $job->region->name }}" />
+                    <x-forms.input name="region" placeholder="Region" value="{{ $job->region->name }}" required />
 
-                    <x-forms.select name="schedule" placeholder="Schedule">
+                    <x-forms.select name="schedule" placeholder="Schedule" required >
                         <option {{ $job->schedule === 'Full-time' ? 'selected' : '' }}>Full-time</option>
                         <option {{ $job->schedule === 'Part-time' ? 'selected' : '' }}>Part-time</option>
                     </x-forms.select>
@@ -27,7 +27,7 @@
                         <div class="label">
                             <span class="label-text">Available until...</span>
                         </div>
-                        <x-forms.input name="expire" type="date" value="{{ $job->expire }}" />
+                        <x-forms.input name="expire" type="date" value="{{ $job->expire }}" required />
                     </div>
 
                     <div>

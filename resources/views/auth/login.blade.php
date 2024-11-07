@@ -1,11 +1,11 @@
-<x-layout class="flex h-screen max-w-none px-0">
+<x-layout class="flex h-screen max-w-none" style="padding: 0px;">
     <div class="w-2/5 px-12 flex flex-col items-start justify-center">
         <h1 class="text-4xl font-bold">Log in</h1>
 
         <x-forms.form method="POST" action="/login">
             <div class="space-y-6">
-                <x-forms.input name="email" type="email" placeholder="Email" />
-                <x-forms.input name="password" type="password" placeholder="Password" />
+                <x-forms.input name="email" type="email" placeholder="Email" required />
+                <x-forms.input name="password" type="password" placeholder="Password" required />
             </div>
 
             <div class="flex items-baseline justify-between">

@@ -22,5 +22,6 @@
 
     <x-forms.error error="{{ $errors->first('desc') }}" />
 
-    <input type="hidden" name="desc" id="desc" value="{!! old('desc') ?? $slot !!}" />
+    <input type="hidden" name="desc" id="desc" value="{!! old('desc') ?? $slot !!}" required />
+    
 </div>
