@@ -37,6 +37,16 @@
         </ul>
     </div>
     <div class="navbar-end">
-        <a href="/login" class="btn">Log in</a>
+        @auth
+            <div class="flex space-x-6 font-bold">
+                @can('create')
+                    <a href="/jobs/create">Post a Job</a>
+                @endcan
+                <button type="submit" form="logout" class="btn btn-ghost">Log out</button>
+            </div>
+        @endauth
+        @guest
+            <a href="/login" class="btn btn-primary">Log in</a>
+        @endguest
     </div>
 </div>
