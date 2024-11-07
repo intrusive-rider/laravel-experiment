@@ -26,7 +26,7 @@ class JobFactory extends Factory
             'salary' => fake()->randomElement([50_000, 90_000, 120_000]),
             'schedule' => fake()->randomElement(['Full-time', 'Part-time']),
             'expire' => fake()->date(),
-            'featured?' => false,
+            'is_featured' => false,
         ];
     }
 }

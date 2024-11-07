@@ -1,4 +1,4 @@
-<footer class="footer p-12 border-t border-white/10">
+<footer class="footer p-12 px-16 border-t border-white/10 mt-36">
     <aside class="space-y-6">
         <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt=""
             class="inline-block scale-110 grayscale opacity-75">
@@ -19,7 +19,6 @@
         <h6 class="footer-title">Legal</h6>
         <a class="link link-hover">Terms of use</a>
         <a class="link link-hover">Privacy policy</a>
-        <a class="link link-hover">Cookie policy</a>
     </nav>
     <nav>
         <h6 class="footer-title">Socials</h6>

@@ -1,16 +1,17 @@
-@props(['label', 'name'])
+@props(['name', 'placeholder' => ''])
 
 @php
     $defaults = [
         'id' => $name,
         'name' => $name,
-        'class' => 'rounded-xl bg-white/10 border border-white/10 px-5 py-4 w-full'
+        'class' => 'select select-bordered w-full',
     ];
 @endphp
 
-<x-forms.field :$label :$name>
+<div class="space-y-2">
     <select {{ $attributes($defaults) }}>
+        <option disabled selected>{{ $placeholder }}</option>
         {{ $slot }}
     </select>
-</x-forms.field>
-
+    <x-forms.error :error="$errors->first($name)" />
+</div>

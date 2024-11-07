@@ -1,21 +1,19 @@
 @props([
     'name' => '',
-    'icon' => 'square',
 ])
 
 @php
     $defaults = [
-        'type' => 'text',
+        'type' => 'file',
         'id' => $name,
         'name' => $name,
-        'class' => 'grow',
+        'class' => 'file-input file-input-bordered w-full grow',
         'value' => old($name),
     ];
 @endphp
 
 <div class="space-y-2">
-    <label for="{{ $name }}" class="input input-bordered flex items-center gap-3">
-        <i class="ph-fill ph-{{ $icon }} text-lg"></i>
+    <label for="{{ $name }}" class="form-control w-full">
         <input {{ $attributes($defaults) }} />
     </label>
     <x-forms.error :error="$errors->first($name)" />

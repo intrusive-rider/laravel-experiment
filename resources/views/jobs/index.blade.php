@@ -1,5 +1,5 @@
 <x-layout>
-    <section class="flex flex-col items-center justify-center text-center py-6 space-y-3">
+    <section class="flex flex-col items-center justify-center text-center">
         @guest
             <h1 class="text-4xl font-bold">Your dream job awaits you!</h1>
         @endguest
@@ -13,7 +13,7 @@
     </section>
     <section class="space-y-6">
         <h2 class="text-2xl font-bold">Featured Jobs</h2>
-        <div class="grid lg:grid-cols-3 gap-8">
+        <div class="grid lg:grid-cols-3 gap-6">
             @foreach ($featured_jobs as $job)
                 <x-job-card :$job />
             @endforeach

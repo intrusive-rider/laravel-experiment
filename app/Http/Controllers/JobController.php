@@ -21,7 +21,7 @@ class JobController extends Controller
     {
         $jobs = Job::latest()->with(['company', 'tags', 'region']);
 
-        $featured_jobs = $jobs->get()->where('featured?', '=', '1');
+        $featured_jobs = $jobs->get()->where('is_featured', '=', '1');
         $jobs = $jobs->simplePaginate(6);
 
         return view('jobs.index', [
@@ -58,7 +58,7 @@ class JobController extends Controller
         ]);
 
         $attr['desc'] = $formatted_desc;
-        $attr['featured?'] = $request->has('featured?');
+        $attr['is_featured'] = $request->has('is_featured');
 
         $region = Region::where('name', $attr['region']);
 
@@ -112,7 +112,7 @@ class JobController extends Controller
         ]);
         
         $attr['desc'] = $formatted_desc;
-        $attr['featured?'] = $request->has('featured?');
+        $attr['is_featured'] = $request->has('is_featured');
         
         $region = Region::where('name', $attr['region']);
 

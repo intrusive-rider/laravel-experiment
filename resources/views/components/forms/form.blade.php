@@ -5,7 +5,7 @@
     $isPostOverride = !in_array($method, ['GET', 'POST']);
 @endphp
 
-<form {{ $attributes(['class' => 'max-w-prose w-full space-y-6']) }}
+<form {{ $attributes(['class' => 'max-w-prose w-full space-y-12']) }}
     method="{{ $method === 'GET' ? 'GET' : 'POST' }}">
     @csrf
     @if ($isPostOverride)
