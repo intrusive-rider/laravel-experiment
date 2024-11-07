@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('salary');
             $table->date('expire');
             $table->string('schedule')->default('Full-time');
-            $table->boolean('featured?')->default(false);
+            $table->boolean('is_featured')->default(false);
             $table->timestamps();
         });
     }

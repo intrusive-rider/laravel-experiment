@@ -47,7 +47,7 @@
             <option class="text-black" {{ $job->schedule === 'Part-time' ? 'selected' : '' }}>Part-time</option>
         </x-forms.select>
 
-        <x-forms.checkbox label="Feature? (costs extra)" name="featured?" value="{{ $job['featured?'] }}" />
+        <x-forms.checkbox label="Feature? (costs extra)" name="is_featured" value="{{ $job['is_featured'] }}" />
 
         <x-forms.divider />
 

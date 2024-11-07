@@ -14,7 +14,7 @@ class JobSeeder extends Seeder
     public function run(): void
     {
         $tags = Tag::factory(3)->create();
-        Job::factory(6)->hasAttached($tags)->create(['featured?' => true]);
+        Job::factory(6)->hasAttached($tags)->create(['is_featured' => true]);
         Job::factory(12)->hasAttached($tags)->create();
     }
 }

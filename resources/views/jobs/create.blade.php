@@ -43,7 +43,7 @@
             <option class="text-black">Part-time</option>
         </x-forms.select>
 
-        <x-forms.checkbox label="Feature? (costs extra)" name="featured?" />
+        <x-forms.checkbox label="Feature? (costs extra)" name="is_featured" />
 
         <x-forms.divider />
 
