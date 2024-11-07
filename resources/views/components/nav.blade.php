@@ -39,9 +39,9 @@
     <div class="navbar-end">
         @auth
             <div class="flex space-x-6 font-bold">
-                @can('create')
-                    <a href="/jobs/create">Post a Job</a>
-                @endcan
+                @role('employer')
+                    <a href="/jobs/create" class="btn btn-ghost">Post a Job</a>
+                @endrole
                 <button type="submit" form="logout" class="btn btn-ghost">Log out</button>
             </div>
         @endauth
