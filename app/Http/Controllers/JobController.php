@@ -122,18 +122,16 @@ class JobController extends Controller
 
         $job->update(Arr::except($attr, ['tags', 'region']) + ['region_id' => $region->first()->id]);
 
+        $job->tags()->detach();
+
         if ($attr['tags'] ?? false) {
-            $job->tags()->detach();
             foreach (explode(',', $attr['tags']) as $tag) {
                 if ($tag) {
                     $job->tag($tag);
                 }
             }
-        } else {
-            $job->tags()->detach();
         }
         
-
         return redirect('/jobs/' . $job->id);
     }
 
