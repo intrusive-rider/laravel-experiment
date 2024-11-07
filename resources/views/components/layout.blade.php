@@ -3,7 +3,7 @@
 
 <x-head />
 
-<body class="hero antialiased">
+<body class="antialiased">
     <div class="px-10">
         <x-nav />
 
