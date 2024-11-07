@@ -14,7 +14,8 @@
                     {{ $job->company->name }}
                 </h3>
 
-                <x-link href="{{ $job->company->url }}" class="text-sm mt-auto text-gray-400">{{ $job->company->url }}</x-link>
+                <x-link href="{{ $job->company->url }}"
+                    class="text-sm mt-auto text-gray-400">{{ $job->company->url }}</x-link>
             </div>
         </x-panel>
         <x-panel class="flex gap-x-6 grow w-fit">
@@ -56,6 +57,9 @@
                     <x-section-heading>Tags</x-section-heading>
 
                     <div>
+                        @if ($job->tags->isEmpty())
+                            <i>No tags found for this job listing.</i>
+                        @endif
                         @foreach ($job->tags as $tag)
                             <x-tag :$tag />
                         @endforeach

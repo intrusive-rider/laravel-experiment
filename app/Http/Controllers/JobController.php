@@ -125,9 +125,14 @@ class JobController extends Controller
         if ($attr['tags'] ?? false) {
             $job->tags()->detach();
             foreach (explode(',', $attr['tags']) as $tag) {
-                $job->tag($tag);
+                if ($tag) {
+                    $job->tag($tag);
+                }
             }
+        } else {
+            $job->tags()->detach();
         }
+        
 
         return redirect('/jobs/' . $job->id);
     }

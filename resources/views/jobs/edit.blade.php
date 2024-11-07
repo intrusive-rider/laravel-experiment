@@ -39,13 +39,16 @@
                     </div>
                 </div>
 
-                <x-forms.checkbox name="is_featured" :checked="$job->is_featured">Feature? (costs extra)</x-forms.checkbox>
+                <x-forms.checkbox name="is_featured" :checked="$job->is_featured === 1">Feature? (costs extra)</x-forms.checkbox>
 
             </div>
 
-            <div class="flex gap-3">
-                <x-forms.button>Edit</x-forms.button>
-                <a href="/" class="btn btn-ghost">Cancel</a>
+            <div class="flex justify-between">
+                <div class="space-x-3">
+                    <x-forms.button>Edit</x-forms.button>
+                    <a href="/" class="btn btn-ghost">Cancel</a>
+                </div>
+                <x-forms.button class="btn-error" form="delete-job">Delete</x-forms.button>
             </div>
         </x-forms.form>
     </div>

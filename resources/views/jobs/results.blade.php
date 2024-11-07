@@ -8,7 +8,7 @@
             </x-forms.form>
         </section>
         @if ($jobs->isEmpty())
-            <h3 class="text-center text-lg">Sorry, no jobs found with that criteria.</h3>
+            <h3 class="text-center text-lg italic">Sorry, no jobs found with that criteria.</h3>
         @endif
         <section>
             <div class="mt-6 space-y-6">
