@@ -31,9 +31,9 @@
     </section>
     <section class="space-y-6">
         <h2 class="text-2xl font-bold">Recently Added</h2>
+        {{ $jobs->links() }}
         @foreach ($jobs as $job)
             <x-job-card-wide :$job />
         @endforeach
-        {{ $jobs->links() }}
     </section>
 </x-layout>
