@@ -50,3 +50,5 @@
         @endguest
     </div>
 </div>
+
+<x-forms.form action="/logout" :method="'DELETE'" class="hidden" id="logout"></x-forms.form>
